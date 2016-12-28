@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	form#formAddBlob(name="addblob",method="post",action="/blobs")
+		p Nombre: 
+			input#inputName(type="text", placeholder="ex. John Smith", name="name")
+		p DNI:
+			input#inputBadge(type="number", placeholder="ex. 123456", name="badge")
+		p Fecha de Pago: 
+			input#inputDob(type="date", name="dob")
+		p Check In: 
+			input#inputIsLoved(type="checkbox", name="isloved")
+		p
+			button#btnSubmit(type="submit") submit
